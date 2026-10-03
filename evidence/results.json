@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "kind": "curated-public-summary-not-raw-output",
+  "snapshot_date": "2026-10-03",
+  "showcase_execution": {
+    "tests_rerun": false,
+    "model_calls": 0,
+    "compiler_invocations": 0
+  },
+  "compiler": {
+    "toolset": "14.44",
+    "version": "MSVC 19.44.35229 x64"
+  },
+  "answer_key": {
+    "maximum_bytes": 1994,
+    "total": 662,
+    "scope": "Selected reference ImGui function bodies; not model recovery count or complete game rebuild",
+    "minimum_bytes": 20,
+    "passed": 662
+  },
+  "baseline": {
+    "retries": 0,
+    "infrastructure_failures": 1,
+    "exact": 1,
+    "call_attempts": 8,
+    "scored_functions": 7
+  },
+  "exact_offline_cases": [
+    {
+      "new_model_calls": 0,
+      "bindings": 3,
+      "linked_and_target_sha256": "bbfa6a2ced79b8fbf753820d08ea976221d832422de5ea4428431dacb006d089",
+      "target_bytes": 388,
+      "relocations": 5,
+      "verification": "Independent relocation encoding relative to match comparator; project COFF reader used",
+      "label": "ItemAdd",
+      "local_compiles": 7
+    },
+    {
+      "new_model_calls": 0,
+      "bindings": 2,
+      "linked_and_target_sha256": "fe2d640e0d9313de1ee336f7098001cab6c28457101709dda5bb5b449d5bf99e",
+      "target_bytes": 223,
+      "relocations": 3,
+      "verification": "Separate standard-library COFF parser, manual relocation encoding, pefile target read",
+      "label": "BeginDragDropTarget",
+      "local_compiles": 2
+    }
+  ],
+  "paired_guidance": {
+    "baseline_exact": 0,
+    "calls": 6,
+    "functions": 3,
+    "guided_exact": 0,
+    "scope": "Selected pattern-positive sample"
+  },
+  "fresh_repair": {
+    "calls": 3,
+    "exact": 0,
+    "repair_compiles": 0,
+    "functions": 3,
+    "eligible_candidates": 0,
+    "candidate_compiles": 3,
+    "scope": "Does not measure repair effectiveness on fresh eligible misses"
+  },
+  "coverage_followup": {
+    "new_exact_matches": 0,
+    "known_223_byte_match_reproduced": true,
+    "model_calls": 0,
+    "recorded_tests_passed": 109,
+    "local_verification_compiles": 5,
+    "test_fixture_compiles": 1
+  },
+  "branch_308": {
+    "best_aligned_edits": 9,
+    "local_compiles": 6,
+    "claude_calls": 0,
+    "exact": false
+  },
+  "near_match_663": {
+    "remaining_difference_offsets": [
+      "0x11",
+      "0x18",
+      "0x1a",
+      "0x21",
+      "0x60"
+    ],
+    "best_aligned_edits": 5,
+    "best_constraints": 0,
+    "initial_constraints": 1,
+    "aggregate_experiment_compiles": 7,
+    "differing_bytes": 5,
+    "initial_aligned_edits": 11,
+    "initial_score": 12,
+    "continuation_compiles": 8,
+    "claude_calls": 0,
+    "defined_string_constant_verified": true,
+    "best_score": 5,
+    "exact": false,
+    "relocations_verified": 13,
+    "matching_suffix_starts_at": "0x66",
+    "target_bytes": 663
+  },
+  "limitations": [
+    "Function-body equality under recorded bindings does not recover original source, names, or types.",
+    "Mutable state, external callees, whole-program behavior, and object metadata are outside the body comparison.",
+    "The public summary omits implementations, executable bytes, private paths, address maps, and raw provider logs.",
+    "Source artifacts are identified but not distributed; hashes alone are not independent reproduction.",
+    "These experiments have different selection rules and must not be pooled as a general accuracy estimate."
+  ],
+  "source_artifacts": [
+    {
+      "artifact": "results/barony-imgui-benchmark/validation.json",
+      "sha256": "fa98deb982b79000e7797ee71947302935afb1874738629749d90161dabdbb3e"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-first8-review.json",
+      "sha256": "028a067fe38812bfdc20afee833f560eef915562e63f87801c91f4433d683a98"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-itemadd-copy-snapshot-v1-review.json",
+      "sha256": "54fa92ab49a1b76294b700da3f2abc5c7dbbe4abfd0e9ac81be50227a48466c3"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-dragdrop-cmov-v1-independent.json",
+      "sha256": "b22cb192fff695eebf97968f3ffc33664d089e752e075b8d2134d69db6ab948d"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-load-before-write-pair3-v2-review.json",
+      "sha256": "c0722c714e51d965161e0654d3142c66d8f3fc90a54a20fbe42a326d653b967b"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-local-repair-fresh3-v1-review.json",
+      "sha256": "c1d437fa8c0b5203780c0fb36063c0b3694252c24b6003e3c61513731ea0484f"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-local-repair-coverage-v2-review.json",
+      "sha256": "5f26948d6e4e789d860dfccf29437f324b26493816a2f55c1496418e4d214ad6"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-308-codegen-v1/manifest.json",
+      "sha256": "54f46481ec35d02f617a852857195b172191d2b583feca8d7a90879322290eb2"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-308-codegen-v1/review.md",
+      "sha256": "54af68d67cd20809fc484c2b2bd40f7fa37776f7691483d0166987a6f6b71db6"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-663-codegen-v1/manifest.json",
+      "sha256": "663aa113d04b39f4021133bcef068387caf865d11a9bdb522bb481a09b7441f2"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-663-codegen-v1/review.md",
+      "sha256": "4edc1345db1e311586ed0cbfe1f4602e02684b760e9944b28779a4f7522e06a8"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-663-entry-v2/continuation-review.json",
+      "sha256": "37cb062cc93c9e2e74fa532914b96ff027d5f0aa071331d8ee9c88c2b54de6a6"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-663-entry-v2/independent-audit.md",
+      "sha256": "529e170f3017c65777ef3f426389de724465d9c2915e15b23128abf161fb0e88"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-663-feedback1-v1/manifest.json",
+      "sha256": "fdb4395b7c765e5afd64c198f945d262fcc8452b562810814e3688f31a99e999"
+    },
+    {
+      "artifact": "results/bench/barony-imgui-benchmark-663-feedback1-v1/events.jsonl",
+      "sha256": "bf8b0a10715e24adc734f48dab5c48da150ee9a2a56c0fed885962059c8ddf24"
+    }
+  ],
+  "snapshot_cutoff": "2026-10-03T14:59:51-05:00",
+  "feedback_in_progress": {
+    "status": "running",
+    "call_limit": 1,
+    "compile_limit": 1,
+    "provider_call_reservations": 1,
+    "recorded_compiles": 0,
+    "completed_result": false,
+    "last_observed_event": "provider_reserved",
+    "last_observed_event_at": "2026-10-03T19:59:51.715690+00:00",
+    "scope": "Excluded from completed outcome counts; subsequent changes are outside this snapshot"
+  }
+}
